@@ -1,11 +1,11 @@
 const webpack = require('webpack');
 const config = require('../build/webpack.config.dev');
 
-function build() {
+function start() {
   console.log('build is begining')
-  let devconfig = webpack(config);
+  let compiler = webpack(config);
 
-  devconfig.run()
+  compiler.run()
 }
 
-build()
+start()
