@@ -6,8 +6,15 @@ function build() {
   let compiler = webpack(config);
 
   compiler.run((err, stats) => {
-    console.log(stats, 'stats')
-    console.log(err, 'err')
+    if (err) {
+      console.error(err);
+      return;
+    }
+    console.log(stats.toString({
+      chunks: false,
+      colors: true
+    }));
+
   })
 }
 
