@@ -6,7 +6,8 @@ function build() {
   let compiler = webpack(config);
 
   compiler.run((err, stats) => {
-    console.log(stats)
+    console.log(stats, 'stats')
+    console.log(err, 'err')
   })
 }
 
